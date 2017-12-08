@@ -14,7 +14,9 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(setKeepScreenOn:(BOOL)screenShouldBeKeptOn)
 {
-    [[UIApplication sharedApplication] setIdleTimerDisabled:screenShouldBeKeptOn];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication] setIdleTimerDisabled:screenShouldBeKeptOn];
+    });
 }
 
 @end
