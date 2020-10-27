@@ -32,10 +32,5 @@
   ],
   "peerDependencies": {
     "react-native": "*"
-  },
-  "rnpm": {
-      "android": {
-          "packageInstance": "new KeepScreenOnPackage(this)"
-      }
   }
 }
